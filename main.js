@@ -79,31 +79,31 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Input file (image)
-  const formImage = document.getElementById("formImage");
-  const formPerview = document.getElementById("formPerview");
+  // const formImage = document.getElementById("formImage");
+  // const formPerview = document.getElementById("formPerview");
 
-  formImage.addEventListener("change", () => {
-    uploadFile(formImage.files[0]);
-  });
+  // formImage.addEventListener("change", () => {
+  //   uploadFile(formImage.files[0]);
+  // });
 
-  function uploadFile(file) {
-    if (!["image/jpeg", "image/png", "image/gif"].includes(file.type)) {
-      alert("Only images");
-      formImage.value = "";
-      return;
-    }
-    if (file.size > 2 * 1024 * 1024) {
-      alert("File larger than 2 mb");
-      return;
-    }
+  // function uploadFile(file) {
+  //   if (!["image/jpeg", "image/png", "image/gif"].includes(file.type)) {
+  //     alert("Only images");
+  //     formImage.value = "";
+  //     return;
+  //   }
+  //   if (file.size > 2 * 1024 * 1024) {
+  //     alert("File larger than 2 mb");
+  //     return;
+  //   }
 
-    var reader = new FileReader();
-    reader.onload = function (e) {
-      formPerview.innerHTML = `<img src="${e.target.result}" alt="Image">`;
-    };
-    reader.onerror = function (e) {
-      alert("Error");
-    };
-    reader.readAsDataURL(file);
-  }
+  //   var reader = new FileReader();
+  //   reader.onload = function (e) {
+  //     formPerview.innerHTML = `<img src="${e.target.result}" alt="Image">`;
+  //   };
+  //   reader.onerror = function (e) {
+  //     alert("Error");
+  //   };
+  //   reader.readAsDataURL(file);
+  // }
 });

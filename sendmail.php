@@ -44,15 +44,15 @@ if(trim(!empty($_POST['message']))){
 }
 
 //file
-if(!empty($_FILES['image']['tmp_name'])){
-    $filePath = __DIR__ . "/files/" . $_FILES['image']['name'];
+// if(!empty($_FILES['image']['tmp_name'])){
+//     $filePath = __DIR__ . "/files/" . $_FILES['image']['name'];
 
-    if(copy($_FILES['image']['tmp_name'], $filePath)){
-        $fileAttach = $filePath;
-        $body.='<p><strong>Photo</strong></p>';
-        $mail->addAttachment($fileAttach);
-    }
-}
+//     if(copy($_FILES['image']['tmp_name'], $filePath)){
+//         $fileAttach = $filePath;
+//         $body.='<p><strong>Photo</strong></p>';
+//         $mail->addAttachment($fileAttach);
+//     }
+// }
 
 $mail->Body = $body;
 
