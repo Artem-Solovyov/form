@@ -58,7 +58,7 @@ if (trim(!empty($_POST['message']))){
 
 $mail->Body = $body;
 $mail->send();
-$message = 'Okay'
+$message = 'Okay';
 // if (!$mail->send()) {
 //     $message = 'Error';
 // } else {
