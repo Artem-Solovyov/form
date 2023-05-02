@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form">
+        <form action="#" id="form" class="form__body">
+          <h1 class="form__title"></h1>
+          <div class="form__item">
+            <label for="formName" class="form__label">Name*:</label>
+            <input
+              type="text"
+              id="formName"
+              name="name"
+              class="form__input _req"
+            />
+          </div>
+          <div class="form__item">
+            <label for="formEmail" class="form__label">Email*:</label>
+            <input
+              type="text"
+              id="formEmail"
+              name="email"
+              class="form__input _req _email"
+            />
+          </div>
+
+          <!-- input radio -->
+          <div class="form__item">
+            <div class="form__label">Left or right?</div>
+            <div class="options">
+              <div class="options__item">
+                <input
+                  id="formRightHanded"
+                  type="radio"
+                  value="right"
+                  name="hand"
+                  class="options__input"
+                  checked
+                />
+                <label for="formRightHanded" class="options__label"
+                  ><span>Right</span></label
+                >
+              </div>
+              <div class="options__item">
+                <input
+                  id="formLeftHanded"
+                  type="radio"
+                  value="left"
+                  name="hand"
+                  class="options__input"
+                />
+                <label for="formLeftHanded" class="options__label"
+                  ><span>Left</span></label
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Input message -->
+          <div class="form__item">
+            <label for="formMessage" class="form__label">Message:</label>
+            <textarea
+              name="message"
+              id="formMessage"
+              class="form__input"
+            ></textarea>
+          </div>
+
+          <!-- Select age -->
+          <div class="form__item">
+            <div class="form__label">Age:</div>
+            <select name="age" class="select">
+              <option value="18-25" selected>Young</option>
+              <option value="25-45">Old</option>
+              <option value="45-...">Super old</option>
+            </select>
+          </div>
+          <!-- Photo -->
+          <div class="form__item">
+            <div class="form__label">Add photo</div>
+            <div class="file">
+              <div class="file__item">
+                <input
+                  id="formImage"
+                  type="file"
+                  name="image"
+                  class="file__input"
+                  accept=".jpg, .png, .gif"
+                />
+                <div class="file__button">Select</div>
+              </div>
+              <div id="formPerview" class="file__perview"></div>
+            </div>
+          </div>
+
+          <!-- Checkbox -->
+          <div class="form__item">
+            <div class="checkbox">
+              <input
+                id="formAgreement"
+                type="checkbox"
+                name="agreement"
+                class="checkbox__input _req"
+              />
+              <label for="formAgreement" class="checkbox__label"
+                ><span
+                  >I give my consent to the processing of personal data</span
+                ></label
+              >
+            </div>
+          </div>
+
+          <button class="form__button" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
