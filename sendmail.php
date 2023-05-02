@@ -2,8 +2,8 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'path/to/PHPMailer/src/Exception.php';
-require 'path/to/PHPMailer/src/PHPMailer.php';
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
 
 
 $mail = new PHPMailer(true);
@@ -19,7 +19,7 @@ $mail->addAddress('solovevartem892@gmail.com');
 $mail->Subject = 'Hello World!';
 
 // Hand
-#hand = "Right";
+$hand = "Right";
 if($_POST['hand'] == "left"){
     $hand = "left";
 }
@@ -56,7 +56,7 @@ if(!empty($_FILES['image']['tmp_name'])){
 
 $mail->Body = $body;
 
-if(!$mail->send()){
+if(!$mail->send()) {
     $message = 'Error';
 } else {
     $message = 'Okay';
