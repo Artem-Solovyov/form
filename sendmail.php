@@ -8,7 +8,7 @@ require 'PHPMailer/src/PHPMailer.php';
 
 $mail = new PHPMailer(true);
 $mail->CharSet = 'UTF-8';
-$mail->setLanguage('ru', 'phpmailer/language/');
+// $mail->setLanguage('ru', 'phpmailer/language/');
 $mail->IsHTML(true);
 
 // от кого письмо
@@ -17,31 +17,32 @@ $mail->setForm('solowayit@gmail.com', 'Artem Solovyov');
 $mail->addAddress('solovevartem892@gmail.com');
 // Theme
 $mail->Subject = 'Hello World!';
+$mail->Body = 'This is body message!';
 
 // Hand
-$hand = "Right";
-if($_POST['hand'] == "left"){
-    $hand = "left";
-}
+// $hand = "Right";
+// if($_POST['hand'] == "left"){
+//     $hand = "left";
+// }
 
 // body of letter
-$body = '<h1>Super letter!</h1>';
+// $body = '<h1>Super letter!</h1>';
 
-if(trim(!empty($_POST['name']))){
-    $body.='<p><strong>Name:</strong> '.$_POST['name'].'</p>';
-}
-if(trim(!empty($_POST['email']))){
-    $body.='<p><strong>E-mail:</strong> '.$_POST['email'].'</p>';
-}
-if(trim(!empty($_POST['hand']))){
-    $body.='<p><strong>Hand:</strong> '.$hand.'</p>';
-}
-if(trim(!empty($_POST['age']))){
-    $body.='<p><strong>Age:</strong> '.$_POST['age'].'</p>';
-}
-if(trim(!empty($_POST['message']))){
-    $body.='<p><strong>Message:</strong> '.$_POST['message'].'</p>';
-}
+// if(trim(!empty($_POST['name']))){
+//     $body.='<p><strong>Name:</strong> '.$_POST['name'].'</p>';
+// }
+// if(trim(!empty($_POST['email']))){
+//     $body.='<p><strong>E-mail:</strong> '.$_POST['email'].'</p>';
+// }
+// if(trim(!empty($_POST['hand']))){
+//     $body.='<p><strong>Hand:</strong> '.$hand.'</p>';
+// }
+// if(trim(!empty($_POST['age']))){
+//     $body.='<p><strong>Age:</strong> '.$_POST['age'].'</p>';
+// }
+// if(trim(!empty($_POST['message']))){
+//     $body.='<p><strong>Message:</strong> '.$_POST['message'].'</p>';
+// }
 
 //file
 // if(!empty($_FILES['image']['tmp_name'])){
@@ -54,7 +55,7 @@ if(trim(!empty($_POST['message']))){
 //     }
 // }
 
-$mail->Body = $body;
+// $mail->Body = $body;
 
 if(!$mail->send()) {
     $message = 'Error';
