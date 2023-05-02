@@ -24,7 +24,7 @@ if($_POST['hand'] == "left"){
     $hand = "left";
 }
 
-body of letter
+// body of letter
 $body = '<h1>Super letter!</h1>';
 
 if(trim(!empty($_POST['name']))){
