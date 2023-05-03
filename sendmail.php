@@ -1,7 +1,7 @@
 <?php
 
 
-use PHPMailer\PHPMailer\PHPMailer;
+use p\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require 'PHPMailer/src/Exception.php';
@@ -57,13 +57,12 @@ if (trim(!empty($_POST['message']))){
 // }
 
 $mail->Body = $body;
-$mail->send();
-$message = 'Okay';
-// if (!$mail->send()) {
-//     $message = 'Error';
-// } else {
-//     $message = 'Okay';
-// }
+
+if (!$mail->send()) {
+    $message = 'Error';
+} else {
+    $message = 'Okay';
+}
 
 $response = ['message' => $message];
 
