@@ -1,11 +1,11 @@
 <?php
 
 
-use p\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
+require (__DIR__."phpmailer/src/Exception.php");
+require (__DIR__."phpmailer/src/PHPMailer.php");
 
 
 $mail = new PHPMailer(true);
@@ -14,7 +14,7 @@ $mail->CharSet = 'UTF-8';
 $mail->IsHTML(true);
 
 // от кого письмо
-// $mail->setFrom('solowayit@gmail.com', 'Artem Solovyov');
+$mail->setFrom('solowayit@gmail.com', 'Artem Solovyov');
 // to
 $mail->addAddress('solovevartem892@gmail.com');
 // Theme
